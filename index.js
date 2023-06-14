@@ -1,11 +1,12 @@
-/*const name = "Joe";
-const height = 74;
-const message = console.log (`${name} is ${height} inches tall`);
+const name = "Joe";
+const height = 39;
+const message = `${name} is ${height} inches tall`;
 
 console.log(message);
-*/
-const { name, height, message } = require("../index.js");
 
+//const { name, height, message } = require("../index.js");
+
+module.exports = { name, height, message };
 describe("Name", () => {
     it('returns "Joe"', () => {
       expect(name).toEqual("Joe");
@@ -13,7 +14,7 @@ describe("Name", () => {
   });
 
   describe("Height", () => {
-    it("is less than 74", () => {
+    it("is less than 39", () => {
       expect(height).toBeLessThan(40);
     });
   });
@@ -24,4 +25,3 @@ describe("Name", () => {
       expect(message).toInclude(height);
     });
   });
-  
